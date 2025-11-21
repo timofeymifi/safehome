@@ -158,7 +158,85 @@ class Router {
     }
 
     bindEvents() {
-        // Nav link clicks
+        // Auth form links
+const authLinks = document.querySelectorAll('.auth-link');
+authLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const pageId = link.getAttribute('data-page');
+        this.navigateTo(pageId);
+    });
+});
+        // User menu in navigation
+        // User menu handling with no selection persistence
+document.addEventListener('click', (e) => {
+    // Toggle dropdown
+    if (e.target.closest('.user-menu-toggle')) {
+        e.preventDefault();
+        const dropdown = e.target.closest('.user-menu').querySelector('.user-dropdown');
+        dropdown.classList.toggle('show');
+        return;
+    }
+    
+    // Handle dropdown links - предотвращаем выделение
+    const dropdownLink = e.target.closest('.user-dropdown [data-page]');
+    if (dropdownLink) {
+        e.preventDefault();
+        
+        // Убираем выделение со всех ссылок в меню
+        document.querySelectorAll('.user-dropdown [data-page]').forEach(link => {
+            link.classList.remove('active');
+            link.style.backgroundColor = '';
+        });
+        
+        const pageId = dropdownLink.getAttribute('data-page');
+        this.navigateTo(pageId);
+        
+        // Закрыть меню
+        dropdownLink.closest('.user-dropdown').classList.remove('show');
+        return;
+    }
+    
+    // Close dropdowns when clicking outside
+    if (!e.target.closest('.user-menu')) {
+        document.querySelectorAll('.user-dropdown').forEach(dropdown => {
+            dropdown.classList.remove('show');
+        });
+    }
+});
+        document.addEventListener('click', (e) => {
+            // Открытие/закрытие меню по клику на переключатель
+            if (e.target.closest('.user-menu-toggle')) {
+                e.preventDefault();
+                e.stopPropagation();
+                const dropdown = e.target.closest('.user-menu').querySelector('.user-dropdown');
+                dropdown.classList.toggle('show');
+            }
+            
+            // Обработка кликов по ссылкам в меню
+            const dropdownLink = e.target.closest('.user-dropdown [data-page]');
+            if (dropdownLink) {
+                e.preventDefault();
+                e.stopPropagation();
+                const pageId = dropdownLink.getAttribute('data-page');
+                this.navigateTo(pageId);
+                
+                // Закрыть меню после клика
+                const dropdown = dropdownLink.closest('.user-dropdown');
+                dropdown.classList.remove('show');
+            }
+        });
+
+        // Закрытие меню при клике вне его
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.user-menu')) {
+                const dropdowns = document.querySelectorAll('.user-dropdown');
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('show');
+                });
+            }
+        });
+                // Nav link clicks
         this.navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();

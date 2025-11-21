@@ -81,6 +81,7 @@ class App {
             if (registerBtn) registerBtn.style.display = 'none';
             
             // Add user menu if not exists
+            // Add user menu if not exists
             if (!document.getElementById('user-menu')) {
                 const userMenu = document.createElement('div');
                 userMenu.id = 'user-menu';
@@ -91,9 +92,9 @@ class App {
                         <span>${this.currentUser.name}</span>
                     </button>
                     <div class="user-dropdown">
-                        <a href="#dashboard" data-page="dashboard">Личный кабинет</a>
-                        <a href="#settings" data-page="settings">Настройки</a>
-                        <a href="#logout" id="global-logout-btn">Выйти</a>
+                        <a href="#dashboard" class="nav-link" data-page="dashboard">Личный кабинет</a>
+                        <a href="#settings" class="nav-link" data-page="settings">Настройки</a>
+                        <a href="#logout" class="nav-link" id="global-logout-btn">Выйти</a>
                     </div>
                 `;
                 navActions.appendChild(userMenu);

@@ -42,6 +42,17 @@ class ComponentsManager {
                 this.handleLogin();
             });
         }
+        // Bind auth form links
+        const authLinks = document.querySelectorAll('.auth-link');
+        authLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const pageId = link.getAttribute('data-page');
+                if (window.router) {
+                    window.router.navigateTo(pageId);
+                }
+            });
+        });
 
         // Phone input formatting
         const phoneInput = document.getElementById('reg-phone');

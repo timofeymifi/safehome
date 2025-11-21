@@ -18,7 +18,7 @@
                     <span class="theme-icon">🌙</span>
                 </button>
                 <a href="#home" class="nav-logo" data-page="home">
-                    <span class="logo-icon">🛡️</span>
+                    <img src="images/logo.svg" alt="SafeHome" class="logo-icon">
                     <span class="logo-text">SafeHome</span>
                 </a>
                 <div class="nav-menu" id="nav-menu">
@@ -54,17 +54,12 @@
                             <button class="btn-secondary btn-large" data-page="about">Узнать больше</button>
                         </div>
                     </div>
-                    <div class="hero-visualization">
-                        <div class="rf-visualization">
-                            <div class="signal-wave"></div>
-                            <div class="devices-grid">
-                                <div class="device normal">📱</div>
-                                <div class="device normal">💻</div>
-                                <div class="device anomaly">❓</div>
-                                <div class="device normal">📺</div>
-                            </div>
-                        </div>
-                    </div>
+                                <div class="hero-visualization">
+                <div class="rf-visualization">
+                    <img src="images/hero-security.svg" alt="Система безопасности умного дома" class="hero-svg">
+                    <div class="signal-wave"></div>
+                </div>
+            </div>
                 </div>
             </section>
 
@@ -186,7 +181,7 @@
                                 <h3>Базовый</h3>
                                 <div class="price">
                                     <span class="currency">₽</span>
-                                    <span class="amount">990</span>
+                                    <span class="amount">9900</span>
                                     <span class="period">/месяц</span>
                                 </div>
                             </div>
@@ -221,7 +216,7 @@
                                 <h3>Профессиональный</h3>
                                 <div class="price">
                                     <span class="currency">₽</span>
-                                    <span class="amount">1990</span>
+                                    <span class="amount">19900</span>
                                     <span class="period">/месяц</span>
                                 </div>
                             </div>
@@ -255,7 +250,7 @@
                                 <h3>Премиум</h3>
                                 <div class="price">
                                     <span class="currency">₽</span>
-                                    <span class="amount">4990</span>
+                                    <span class="amount">49900</span>
                                     <span class="period">/месяц</span>
                                 </div>
                             </div>
@@ -1419,7 +1414,7 @@
                                 <h3 id="plan-name">Профессиональный</h3>
                                 <div class="price">
                                     <span class="currency">₽</span>
-                                    <span class="amount" id="plan-price">1990</span>
+                                    <span class="amount" id="plan-price">19900</span>
                                     <span class="period">/месяц</span>
                                 </div>
                             </div>
@@ -1519,7 +1514,10 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="contact-message">Сообщение</label>
-                                    <textarea id="contact-message" placeholder=" " rows="5" margin-bottom: 30px required></textarea>
+                                    <div class="custom-textarea">
+                                        <textarea id="contact-message" placeholder=" " rows="5" required></textarea>
+                                        <div class="textarea-border"></div>
+                                    </div>
                                 </div>
                                 <button type="submit" class="btn-primary full-width">Отправить сообщение</button>
                             </form>
@@ -2183,7 +2181,7 @@
                                         <option>1 год</option>
                                     </select>
                                 </div>
-                                <button class="btn-primary">Сохранить настройки</button>
+                                <button class="btn-primary save-settings-btn">Сохранить настройки</button>
                             </div>
                         </div>
                     </div>
@@ -2235,7 +2233,7 @@
             <div class="footer-container">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <span class="logo-icon">🛡️</span>
+                        <img src="images/logo.svg" alt="SafeHome" class="logo-icon">
                         <span class="logo-text">SafeHome</span>
                     </div>
                     <p class="footer-description">

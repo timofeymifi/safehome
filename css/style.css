@@ -1124,4 +1124,64 @@ body {
     color: black;
   }
 }
+/* Стили для SVG логотипа */
+.nav-logo .logo-icon,
+.footer-logo .logo-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
 
+/* Для адаптивности на мобильных */
+@media (max-width: 768px) {
+    .nav-logo .logo-icon,
+    .footer-logo .logo-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
+/* Стили для SVG логотипа */
+.nav-logo .logo-icon,
+.footer-logo .logo-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    transition: filter 0.3s ease;
+}
+
+/* Светлая тема - логотип черный */
+.light-theme .nav-logo .logo-icon,
+.light-theme .footer-logo .logo-icon {
+    filter: invert(0%);
+}
+
+/* Темная тема - логотип белый */
+.dark-theme .nav-logo .logo-icon,
+.dark-theme .footer-logo .logo-icon {
+    filter: invert(100%);
+}
+/* Hero SVG Styles */
+.hero-svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: var(--radius-2xl);
+}
+
+.rf-visualization {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .hero-svg {
+        max-height: 300px;
+    }
+    
+    .rf-visualization {
+        height: 350px;
+    }
+}
