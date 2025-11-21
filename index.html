@@ -1,0 +1,2304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeHome - Система безопасности умного дома</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-theme">
+    <div id="app">
+        <!-- Навигация -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <button class="theme-toggle" id="theme-toggle">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <a href="#home" class="nav-logo" data-page="home">
+                    <span class="logo-icon">🛡️</span>
+                    <span class="logo-text">SafeHome</span>
+                </a>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="#home" class="nav-link active" data-page="home">Главная</a>
+                    <a href="#about" class="nav-link" data-page="about">О компании</a>
+                    <a href="#services" class="nav-link" data-page="services">Услуги</a>
+                    <a href="#reviews" class="nav-link" data-page="reviews">Отзывы</a>
+                    <a href="#blog" class="nav-link" data-page="blog">Блог</a>
+                    <a href="#contacts" class="nav-link" data-page="contacts">Контакты</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="btn-secondary" id="login-btn">Вход</button>
+                    <button class="btn-primary" id="register-btn">Регистрация</button>
+                </div>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Основной контент -->
+        <main class="main-content">
+            <!-- Главная страница -->
+            <section id="home" class="page active">
+                <div class="hero-section">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Безопасность вашего умного дома начинается с радиоэфира</h1>
+                        <p class="hero-subtitle">Обнаруживаем скрытые устройства и аномалии через анализ электромагнитного излучения</p>
+                        <div class="hero-actions">
+                            <button class="btn-primary btn-large" data-page="register">Начать мониторинг</button>
+                            <button class="btn-secondary btn-large" data-page="about">Узнать больше</button>
+                        </div>
+                    </div>
+                    <div class="hero-visualization">
+                        <div class="rf-visualization">
+                            <div class="signal-wave"></div>
+                            <div class="devices-grid">
+                                <div class="device normal">📱</div>
+                                <div class="device normal">💻</div>
+                                <div class="device anomaly">❓</div>
+                                <div class="device normal">📺</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- О компании -->
+            <section id="about" class="page">
+                <div class="page-container">
+                    <div class="about-header">
+                        <h1>О компании SafeHome</h1>
+                        <p class="page-subtitle">Инновационные решения для безопасности умного дома</p>
+                    </div>
+                    
+                    <div class="about-grid">
+                        <div class="about-content">
+                            <div class="about-section">
+                                <h2>Наша миссия</h2>
+                                <p>SafeHome — это передовая система безопасности, которая переопределяет подход к защите умного дома. Мы используем технологию пассивного радиочастотного мониторинга для обнаружения скрытых угроз, которые традиционные системы безопасности не могут выявить.</p>
+                            </div>
+                            
+                            <div class="about-section">
+                                <h2>Технология будущего</h2>
+                                <p>Наша платформа использует Software Defined Radio (SDR) технологии для анализа электромагнитного спектра вашего дома. В отличие от традиционных решений, мы не требуем установки агентов на устройства и не вмешиваемся в работу сети.</p>
+                            </div>
+                            
+                            <div class="about-section">
+                                <h2>Принципы работы</h2>
+                                <div class="workflow">
+                                    <div class="workflow-step">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h3>Пассивный мониторинг</h3>
+                                            <p>Система непрерывно анализирует радиоэфир в диапазонах Wi-Fi, Bluetooth, Zigbee и других протоколов IoT</p>
+                                        </div>
+                                    </div>
+                                    <div class="workflow-step">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h3>ИИ-аналитика</h3>
+                                            <p>Нейросети идентифицируют устройства и обнаруживают аномалии в поведении с точностью 99.7%</p>
+                                        </div>
+                                    </div>
+                                    <div class="workflow-step">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h3>Мгновенные оповещения</h3>
+                                            <p>Вы получаете уведомления о подозрительной активности в реальном времени через мобильное приложение</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="about-stats">
+                            <div class="stats-card">
+                                <div class="stat-value">99.7%</div>
+                                <div class="stat-label">Точность обнаружения</div>
+                            </div>
+                            <div class="stats-card">
+                                <div class="stat-value">24/7</div>
+                                <div class="stat-label">Непрерывный мониторинг</div>
+                            </div>
+                            <div class="stats-card">
+                                <div class="stat-value">0ms</div>
+                                <div class="stat-label">Задержка оповещений</div>
+                            </div>
+                            <div class="stats-card">
+                                <div class="stat-value">100%</div>
+                                <div class="stat-label">Конфиденциальность</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-specs">
+                        <h2>Технические преимущества</h2>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <div class="spec-icon">📡</div>
+                                <div class="spec-content">
+                                    <h4>Широкий охват</h4>
+                                    <p>Мониторинг всех популярных беспроводных протоколов: Wi-Fi 2.4/5/6 GHz, Bluetooth LE, Zigbee, LoRa, Z-Wave</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">🤖</div>
+                                <div class="spec-content">
+                                    <h4>Искусственный интеллект</h4>
+                                    <p>Самообучающиеся алгоритмы, адаптирующиеся к радиоэфирной картине вашего дома</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">🔒</div>
+                                <div class="spec-content">
+                                    <h4>Полная анонимность</h4>
+                                    <p>Система работает в пассивном режиме, не оставляя цифровых следов и не обнаруживаясь устройствами</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">⚡</div>
+                                <div class="spec-content">
+                                    <h4>Высокая производительность</h4>
+                                    <p>Обработка до 5000 радиочастотных событий в секунду на одном SDR-приемнике</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Услуги -->
+            <section id="services" class="page">
+                <div class="page-container">
+                    <div class="services-header">
+                        <h1>Наши решения для безопасности</h1>
+                        <p class="page-subtitle">Выберите подходящий пакет мониторинга для вашего умного дома</p>
+                    </div>
+                    
+                    <div class="pricing-grid">
+                        <div class="pricing-card" data-plan="basic">
+                            <div class="pricing-header">
+                                <h3>Базовый</h3>
+                                <div class="price">
+                                    <span class="currency">₽</span>
+                                    <span class="amount">990</span>
+                                    <span class="period">/месяц</span>
+                                </div>
+                            </div>
+                            <div class="pricing-features">
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>Мониторинг до 10 устройств</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>Базовые оповещения</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>История за 7 дней</span>
+                                </div>
+                                <div class="feature disabled">
+                                    <span class="feature-icon">✗</span>
+                                    <span>Расширенная аналитика</span>
+                                </div>
+                                <div class="feature disabled">
+                                    <span class="feature-icon">✗</span>
+                                    <span>Приоритетная поддержка</span>
+                                </div>
+                            </div>
+                            <button class="btn-secondary full-width subscribe-btn">Выбрать тариф</button>
+                        </div>
+                        
+                        <div class="pricing-card featured" data-plan="professional">
+                            <div class="pricing-badge">Популярный</div>
+                            <div class="pricing-header">
+                                <h3>Профессиональный</h3>
+                                <div class="price">
+                                    <span class="currency">₽</span>
+                                    <span class="amount">1990</span>
+                                    <span class="period">/месяц</span>
+                                </div>
+                            </div>
+                            <div class="pricing-features">
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>Мониторинг до 50 устройств</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>Расширенные оповещения</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>История за 30 дней</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>Расширенная аналитика</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>Приоритетная поддержка</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary full-width subscribe-btn">Выбрать тариф</button>
+                        </div>
+                        
+                        <div class="pricing-card" data-plan="premium">
+                            <div class="pricing-header">
+                                <h3>Премиум</h3>
+                                <div class="price">
+                                    <span class="currency">₽</span>
+                                    <span class="amount">4990</span>
+                                    <span class="period">/месяц</span>
+                                </div>
+                            </div>
+                            <div class="pricing-features">
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>Неограниченное количество устройств</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>Мгновенные оповещения</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>История за 90 дней</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>Расширенная аналитика + AI</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>Персональный менеджер</span>
+                                </div>
+                            </div>
+                            <button class="btn-secondary full-width subscribe-btn">Выбрать тариф</button>
+                        </div>
+                    </div>
+                    
+                    <div class="services-features">
+                        <h2>Что входит в каждый пакет</h2>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">📡</div>
+                                <h4>SDR-мониторинг</h4>
+                                <p>Пассивный анализ всех радиочастотных диапазонов в реальном времени</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🤖</div>
+                                <h4>ИИ-аналитика</h4>
+                                <p>Умные алгоритмы для обнаружения аномалий и неизвестных устройств</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">📱</div>
+                                <h4>Мобильное приложение</h4>
+                                <p>Полный контроль безопасности с вашего смартфона</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🔔</div>
+                                <h4>Умные оповещения</h4>
+                                <p>Настраиваемые уведомления о подозрительной активности</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SDR оборудование -->
+            <section id="sdr-equipment" class="page">
+                <div class="page-container">
+                    <div class="services-header">
+                        <h1>SDR оборудование</h1>
+                        <p class="page-subtitle">Профессиональные SDR-приемники для мониторинга радиоэфира</p>
+                    </div>
+                    
+                    <div class="pricing-grid">
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h3>RTL-SDR V3</h3>
+                                <div class="price">
+                                    <span class="currency">₽</span>
+                                    <span class="amount">2,990</span>
+                                </div>
+                            </div>
+                            <div class="pricing-features">
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>Диапазон: 24MHz - 1.7GHz</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>Антенны: 2 всенаправленные</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>Поддержка: Windows, Linux, Mac</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>Идеально для начинающих</span>
+                                </div>
+                            </div>
+                            <button class="btn-secondary full-width">Купить</button>
+                        </div>
+                        
+                        <div class="pricing-card featured">
+                            <div class="pricing-badge">Рекомендуем</div>
+                            <div class="pricing-header">
+                                <h3>HackRF One</h3>
+                                <div class="price">
+                                    <span class="currency">₽</span>
+                                    <span class="amount">14,990</span>
+                                </div>
+                            </div>
+                            <div class="pricing-features">
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>Диапазон: 1MHz - 6GHz</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>Прием и передача</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>Полнодуплексный режим</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>Профессиональное использование</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary full-width">Купить</button>
+                        </div>
+                        
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h3>BladeRF 2.0</h3>
+                                <div class="price">
+                                    <span class="currency">₽</span>
+                                    <span class="amount">29,990</span>
+                                </div>
+                            </div>
+                            <div class="pricing-features">
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>Диапазон: 47MHz - 6GHz</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>2x2 MIMO</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>FPGA обработка</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">✓</span>
+                                    <span>Корпоративный уровень</span>
+                                </div>
+                            </div>
+                            <button class="btn-secondary full-width">Купить</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-specs">
+                        <h2>Технические характеристики</h2>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <div class="spec-icon">📶</div>
+                                <div class="spec-content">
+                                    <h4>Широкий охват частот</h4>
+                                    <p>Наши SDR-приемники покрывают все популярные диапазоны: Wi-Fi, Bluetooth, Zigbee, LoRa, GSM, LTE и другие</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">⚡</div>
+                                <div class="spec-content">
+                                    <h4>Высокая производительность</h4>
+                                    <p>Полоса пропускания до 56 MHz позволяет анализировать несколько каналов одновременно</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">🔧</div>
+                                <div class="spec-content">
+                                    <h4>Простота настройки</h4>
+                                    <p>Готовые комплекты с предустановленным ПО и подробными инструкциями</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">🛡️</div>
+                                <div class="spec-content">
+                                    <h4>Полная совместимость</h4>
+                                    <p>Работает с системой SafeHome и популярным ПО: SDR#, GQRX, HDSDR</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Регистрация -->
+            <section id="register" class="page">
+                <div class="auth-container">
+                    <div class="auth-card">
+                        <div class="auth-header">
+                            <h2>Создать аккаунт</h2>
+                            <p>Присоединяйтесь к системе безопасности умного дома</p>
+                        </div>
+                        <form class="auth-form" id="register-form">
+                            <div class="form-group">
+                                <label for="reg-name">Полное имя</label>
+                                <input type="text" id="reg-name" placeholder="Иван Иванов" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-email">Email</label>
+                                <input type="email" id="reg-email" placeholder="ivan@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-phone">Телефон</label>
+                                <input type="tel" id="reg-phone" placeholder="+7 (999) 999-99-99" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-password">Пароль</label>
+                                <input type="password" id="reg-password" placeholder="Не менее 8 символов" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg-confirm">Подтверждение пароля</label>
+                                <input type="password" id="reg-confirm" placeholder="Повторите пароль" required>
+                            </div>
+                            <div class="form-options">
+                                <label class="checkbox">
+                                    <input type="checkbox" required>
+                                    <span class="checkmark"></span>
+                                    Я принимаю условия использования
+                                </label>
+                            </div>
+                            <button type="submit" class="btn-primary full-width">Создать аккаунт</button>
+                        </form>
+                        <div class="auth-footer">
+                            <p>Уже есть аккаунт? <a href="#login" class="auth-link" data-page="login">Войти</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Авторизация -->
+            <section id="login" class="page">
+                <div class="auth-container">
+                    <div class="auth-card">
+                        <div class="auth-header">
+                            <h2>Вход в систему</h2>
+                            <p>Войдите в свой аккаунт безопасности</p>
+                        </div>
+                        <form class="auth-form" id="login-form">
+                            <div class="form-group">
+                                <label for="login-email">Email</label>
+                                <input type="email" id="login-email" placeholder="ivan@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="login-password">Пароль</label>
+                                <input type="password" id="login-password" placeholder="Введите ваш пароль" required>
+                            </div>
+                            <div class="form-options">
+                                <label class="checkbox">
+                                    <input type="checkbox" id="moderator-check">
+                                    <span class="checkmark"></span>
+                                    Я модератор
+                                </label>
+                                <a href="#forgot-password" class="forgot-link">Забыли пароль?</a>
+                            </div>
+                            <button type="submit" class="btn-primary full-width">Войти</button>
+                        </form>
+                        <div class="auth-divider">
+                            <span>или войдите с помощью</span>
+                        </div>
+                        <div class="social-auth">
+                            <button class="btn-social google" data-provider="google">
+                                <span class="social-icon">🔍</span>
+                                Google
+                            </button>
+                            <button class="btn-social apple" data-provider="apple">
+                                <span class="social-icon">🍎</span>
+                                Apple ID
+                            </button>
+                        </div>
+                        <div class="auth-footer">
+                            <p>Нет аккаунта? <a href="#register" class="auth-link" data-page="register">Зарегистрироваться</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Онбординг -->
+            <section id="onboarding" class="page">
+                <div class="onboarding-container">
+                    <div class="onboarding-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="onboarding-progress"></div>
+                        </div>
+                    </div>
+                    <div class="onboarding-slides">
+                        <!-- Слайд 1 -->
+                        <div class="onboarding-slide active" data-slide="1">
+                            <div class="slide-visual">
+                                <div class="rf-animation">
+                                    <div class="signal-dots">
+                                        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                                        <div class="dot"></div><div class="dot anomaly"></div><div class="dot"></div>
+                                        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-content">
+                                <h2>Обнаружение скрытых угроз</h2>
+                                <p>Наша система анализирует радиоэфир и находит устройства, которые не видны в вашей сети</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Слайд 2 -->
+                        <div class="onboarding-slide" data-slide="2">
+                            <div class="slide-visual">
+                                <div class="device-monitor">
+                                    <div class="monitor-screen">
+                                        <div class="device-list">
+                                            <div class="device-item trusted">
+                                                <span class="device-icon">📱</span>
+                                                <span class="device-name">Ваш телефон</span>
+                                                <span class="device-status">✓</span>
+                                            </div>
+                                            <div class="device-item trusted">
+                                                <span class="device-icon">💻</span>
+                                                <span class="device-name">Ноутбук</span>
+                                                <span class="device-status">✓</span>
+                                            </div>
+                                            <div class="device-item unknown">
+                                                <span class="device-icon">❓</span>
+                                                <span class="device-name">Неизвестное устройство</span>
+                                                <span class="device-status">⚠️</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-content">
+                                <h2>Контроль всех устройств</h2>
+                                <p>Видите все подключенные устройства и получайте оповещения о подозрительной активности</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Слайд 3 -->
+                        <div class="onboarding-slide" data-slide="3">
+                            <div class="slide-visual">
+                                <div class="security-shield">
+                                    <div class="shield-icon">🛡️</div>
+                                    <div class="protection-ring"></div>
+                                </div>
+                            </div>
+                            <div class="slide-content">
+                                <h2>Полная безопасность</h2>
+                                <p>Пассивный мониторинг не оставляет следов и не может быть обнаружен злоумышленниками</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="onboarding-actions">
+                        <button class="btn-secondary" id="skip-onboarding">Пропустить</button>
+                        <button class="btn-primary" id="next-slide">Далее</button>
+                        <button class="btn-primary" id="get-started" style="display: none;">Начать использование</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Дашборд клиента -->
+            <section id="dashboard" class="page">
+                <div class="dashboard-container">
+                    <div class="dashboard-sidebar">
+                        <div class="sidebar-header">
+                            <div class="user-info">
+                                <div class="user-avatar" id="user-avatar">ИИ</div>
+                                <div class="user-details">
+                                    <div class="user-name" id="user-name">Иван Иванов</div>
+                                    <div class="user-status">Online</div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="sidebar-nav">
+                            <a href="#dashboard" class="nav-item active" data-page="dashboard">
+                                <span class="nav-icon">📊</span>
+                                <span class="nav-text">Обзор</span>
+                            </a>
+                            <a href="#device-overview" class="nav-item" data-page="device-overview">
+                                <span class="nav-icon">📱</span>
+                                <span class="nav-text">Устройства</span>
+                            </a>
+                            <a href="#alerts" class="nav-item" data-page="alerts">
+                                <span class="nav-icon">⚠️</span>
+                                <span class="nav-text">Оповещения</span>
+                                <span class="nav-badge">3</span>
+                            </a>
+                            <a href="#reports" class="nav-item" data-page="reports">
+                                <span class="nav-icon">📋</span>
+                                <span class="nav-text">Отчеты</span>
+                            </a>
+                            <a href="#settings" class="nav-item" data-page="settings">
+                                <span class="nav-icon">⚙️</span>
+                                <span class="nav-text">Настройки</span>
+                            </a>
+                            <a href="#logout" class="nav-item" id="logout-btn">
+                                <span class="nav-icon">🚪</span>
+                                <span class="nav-text">Выйти</span>
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="dashboard-header">
+                            <h1>Обзор безопасности</h1>
+                            <div class="header-actions">
+                                <div class="status-indicator positive">
+                                    <div class="status-dot"></div>
+                                    Система активна
+                                </div>
+                                <button class="btn-primary" data-page="new-scan">Новое сканирование</button>
+                            </div>
+                        </div>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon">📡</div>
+                                <div class="stat-content">
+                                    <div class="stat-value">24</div>
+                                    <div class="stat-label">Всего устройств</div>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">🛡️</div>
+                                <div class="stat-content">
+                                    <div class="stat-value">22</div>
+                                    <div class="stat-label">Безопасные</div>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">⚠️</div>
+                                <div class="stat-content">
+                                    <div class="stat-value">2</div>
+                                    <div class="stat-label">Подозрительные</div>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">📶</div>
+                                <div class="stat-content">
+                                    <div class="stat-value">98%</div>
+                                    <div class="stat-label">Стабильность</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard-grid">
+                            <div class="chart-card">
+                                <div class="card-header">
+                                    <h3>Активность устройств</h3>
+                                    <select class="time-selector">
+                                        <option>24 часа</option>
+                                        <option>7 дней</option>
+                                        <option>30 дней</option>
+                                    </select>
+                                </div>
+                                <div class="chart-container">
+                                    <div class="chart-axis">
+                                        <div class="y-axis">
+                                            <span>Активность (шум)</span>
+                                            <div class="y-labels">
+                                                <span>100%</span>
+                                                <span>75%</span>
+                                                <span>50%</span>
+                                                <span>25%</span>
+                                                <span>0%</span>
+                                            </div>
+                                        </div>
+                                        <div class="chart-area">
+                                            <div class="chart-bars">
+                                                <div class="bar" style="height: 60%" data-value="60"></div>
+                                                <div class="bar" style="height: 80%" data-value="80"></div>
+                                                <div class="bar" style="height: 45%" data-value="45"></div>
+                                                <div class="bar" style="height: 90%" data-value="90"></div>
+                                                <div class="bar" style="height: 30%" data-value="30"></div>
+                                                <div class="bar" style="height: 70%" data-value="70"></div>
+                                                <div class="bar" style="height: 85%" data-value="85"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="x-axis">
+                                        <span>Время</span>
+                                        <div class="x-labels">
+                                            <span>09:00</span>
+                                            <span>12:00</span>
+                                            <span>15:00</span>
+                                            <span>18:00</span>
+                                            <span>21:00</span>
+                                            <span>00:00</span>
+                                            <span>03:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="alerts-card">
+                                <div class="card-header">
+                                    <h3>Последние оповещения</h3>
+                                    <button class="btn-ghost" data-page="alerts">Все оповещения</button>
+                                </div>
+                                <div class="alerts-list">
+                                    <div class="alert-item warning">
+                                        <div class="alert-icon">⚠️</div>
+                                        <div class="alert-content">
+                                            <div class="alert-title">Неизвестное устройство</div>
+                                            <div class="alert-description">Обнаружено новое Bluetooth устройство</div>
+                                            <div class="alert-time">10 минут назад</div>
+                                        </div>
+                                    </div>
+                                    <div class="alert-item critical">
+                                        <div class="alert-icon">🚨</div>
+                                        <div class="alert-content">
+                                            <div class="alert-title">Подозрительная активность</div>
+                                            <div class="alert-description">Аномальная передача данных</div>
+                                            <div class="alert-time">2 часа назад</div>
+                                        </div>
+                                    </div>
+                                    <div class="alert-item info">
+                                        <div class="alert-icon">ℹ️</div>
+                                        <div class="alert-content">
+                                            <div class="alert-title">Сканирование завершено</div>
+                                            <div class="alert-description">Проверено 24 устройства</div>
+                                            <div class="alert-time">5 часов назад</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Обзор устройств -->
+            <section id="device-overview" class="page">
+                <div class="dashboard-container">
+                    <div class="dashboard-sidebar">
+                        <div class="sidebar-header">
+                            <div class="user-info">
+                                <div class="user-avatar" id="user-avatar-devices">ИИ</div>
+                                <div class="user-details">
+                                    <div class="user-name" id="user-name-devices">Иван Иванов</div>
+                                    <div class="user-status">Online</div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="sidebar-nav">
+                            <a href="#dashboard" class="nav-item" data-page="dashboard">
+                                <span class="nav-icon">📊</span>
+                                <span class="nav-text">Обзор</span>
+                            </a>
+                            <a href="#device-overview" class="nav-item active" data-page="device-overview">
+                                <span class="nav-icon">📱</span>
+                                <span class="nav-text">Устройства</span>
+                            </a>
+                            <a href="#alerts" class="nav-item" data-page="alerts">
+                                <span class="nav-icon">⚠️</span>
+                                <span class="nav-text">Оповещения</span>
+                            </a>
+                            <a href="#reports" class="nav-item" data-page="reports">
+                                <span class="nav-icon">📋</span>
+                                <span class="nav-text">Отчеты</span>
+                            </a>
+                            <a href="#settings" class="nav-item" data-page="settings">
+                                <span class="nav-icon">⚙️</span>
+                                <span class="nav-text">Настройки</span>
+                            </a>
+                            <a href="#logout" class="nav-item" id="logout-btn-devices">
+                                <span class="nav-icon">🚪</span>
+                                <span class="nav-text">Выйти</span>
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="dashboard-subpage">
+                            <div class="subpage-header">
+                                <h2>Мои устройства</h2>
+                                <button class="btn-primary">Добавить устройство</button>
+                            </div>
+                            <div class="devices-list">
+                                <div class="device-card">
+                                    <div class="device-header">
+                                        <div class="device-icon">📱</div>
+                                        <div class="device-info">
+                                            <div class="device-name">iPhone 13 Pro</div>
+                                            <div class="device-status trusted">Доверенное</div>
+                                        </div>
+                                    </div>
+                                    <div class="device-details">
+                                        <div class="detail">Тип: Смартфон</div>
+                                        <div class="detail">Протокол: Bluetooth, Wi-Fi</div>
+                                        <div class="detail">Последняя активность: 2 мин назад</div>
+                                    </div>
+                                </div>
+                                <div class="device-card">
+                                    <div class="device-header">
+                                        <div class="device-icon">💻</div>
+                                        <div class="device-info">
+                                            <div class="device-name">MacBook Pro</div>
+                                            <div class="device-status trusted">Доверенное</div>
+                                        </div>
+                                    </div>
+                                    <div class="device-details">
+                                        <div class="detail">Тип: Ноутбук</div>
+                                        <div class="detail">Протокол: Wi-Fi, Bluetooth</div>
+                                        <div class="detail">Последняя активность: 5 мин назад</div>
+                                    </div>
+                                </div>
+                                <div class="device-card">
+                                    <div class="device-header">
+                                        <div class="device-icon">❓</div>
+                                        <div class="device-info">
+                                            <div class="device-name">Неизвестное устройство</div>
+                                            <div class="device-status suspicious">Подозрительное</div>
+                                        </div>
+                                    </div>
+                                    <div class="device-details">
+                                        <div class="detail">Тип: Неизвестно</div>
+                                        <div class="detail">Протокол: Bluetooth LE</div>
+                                        <div class="detail">Последняя активность: 10 мин назад</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Оповещения -->
+            <section id="alerts" class="page">
+                <div class="dashboard-container">
+                    <div class="dashboard-sidebar">
+                        <div class="sidebar-header">
+                            <div class="user-info">
+                                <div class="user-avatar" id="user-avatar-alerts">ИИ</div>
+                                <div class="user-details">
+                                    <div class="user-name" id="user-name-alerts">Иван Иванов</div>
+                                    <div class="user-status">Online</div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="sidebar-nav">
+                            <a href="#dashboard" class="nav-item" data-page="dashboard">
+                                <span class="nav-icon">📊</span>
+                                <span class="nav-text">Обзор</span>
+                            </a>
+                            <a href="#device-overview" class="nav-item" data-page="device-overview">
+                                <span class="nav-icon">📱</span>
+                                <span class="nav-text">Устройства</span>
+                            </a>
+                            <a href="#alerts" class="nav-item active" data-page="alerts">
+                                <span class="nav-icon">⚠️</span>
+                                <span class="nav-text">Оповещения</span>
+                            </a>
+                            <a href="#reports" class="nav-item" data-page="reports">
+                                <span class="nav-icon">📋</span>
+                                <span class="nav-text">Отчеты</span>
+                            </a>
+                            <a href="#settings" class="nav-item" data-page="settings">
+                                <span class="nav-icon">⚙️</span>
+                                <span class="nav-text">Настройки</span>
+                            </a>
+                            <a href="#logout" class="nav-item" id="logout-btn-alerts">
+                                <span class="nav-icon">🚪</span>
+                                <span class="nav-text">Выйти</span>
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="dashboard-subpage">
+                            <div class="subpage-header">
+                                <h2>Оповещения системы</h2>
+                                <button class="btn-secondary">Настройки уведомлений</button>
+                            </div>
+                            <div class="alerts-list">
+                                <div class="alert-item warning">
+                                    <div class="alert-icon">⚠️</div>
+                                    <div class="alert-content">
+                                        <div class="alert-title">Неизвестное устройство</div>
+                                        <div class="alert-description">Обнаружено новое Bluetooth устройство</div>
+                                        <div class="alert-time">10 минут назад</div>
+                                    </div>
+                                </div>
+                                <div class="alert-item critical">
+                                    <div class="alert-icon">🚨</div>
+                                    <div class="alert-content">
+                                        <div class="alert-title">Подозрительная активность</div>
+                                        <div class="alert-description">Аномальная передача данных</div>
+                                        <div class="alert-time">2 часа назад</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Отчеты -->
+            <section id="reports" class="page">
+                <div class="dashboard-container">
+                    <div class="dashboard-sidebar">
+                        <div class="sidebar-header">
+                            <div class="user-info">
+                                <div class="user-avatar" id="user-avatar-reports">ИИ</div>
+                                <div class="user-details">
+                                    <div class="user-name" id="user-name-reports">Иван Иванов</div>
+                                    <div class="user-status">Online</div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="sidebar-nav">
+                            <a href="#dashboard" class="nav-item" data-page="dashboard">
+                                <span class="nav-icon">📊</span>
+                                <span class="nav-text">Обзор</span>
+                            </a>
+                            <a href="#device-overview" class="nav-item" data-page="device-overview">
+                                <span class="nav-icon">📱</span>
+                                <span class="nav-text">Устройства</span>
+                            </a>
+                            <a href="#alerts" class="nav-item" data-page="alerts">
+                                <span class="nav-icon">⚠️</span>
+                                <span class="nav-text">Оповещения</span>
+                            </a>
+                            <a href="#reports" class="nav-item active" data-page="reports">
+                                <span class="nav-icon">📋</span>
+                                <span class="nav-text">Отчеты</span>
+                            </a>
+                            <a href="#settings" class="nav-item" data-page="settings">
+                                <span class="nav-icon">⚙️</span>
+                                <span class="nav-text">Настройки</span>
+                            </a>
+                            <a href="#logout" class="nav-item" id="logout-btn-reports">
+                                <span class="nav-icon">🚪</span>
+                                <span class="nav-text">Выйти</span>
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="dashboard-subpage">
+                            <div class="subpage-header">
+                                <h2>Отчеты безопасности</h2>
+                                <button class="btn-primary">Создать отчет</button>
+                            </div>
+                            <div class="reports-grid">
+                                <div class="report-card">
+                                    <div class="report-header">
+                                        <h3>Еженедельный отчет</h3>
+                                        <span class="report-date">10 марта 2025</span>
+                                    </div>
+                                    <div class="report-stats">
+                                        <div class="stat">Просканировано устройств: <strong>24</strong></div>
+                                        <div class="stat">Обнаружено угроз: <strong>2</strong></div>
+                                        <div class="stat">Уровень безопасности: <strong>Высокий</strong></div>
+                                    </div>
+                                    <button class="btn-secondary">Скачать PDF</button>
+                                </div>
+                                <div class="report-card">
+                                    <div class="report-header">
+                                        <h3>Ежемесячный отчет</h3>
+                                        <span class="report-date">1 марта 2025</span>
+                                    </div>
+                                    <div class="report-stats">
+                                        <div class="stat">Просканировано устройств: <strong>89</strong></div>
+                                        <div class="stat">Обнаружено угроз: <strong>5</strong></div>
+                                        <div class="stat">Уровень безопасности: <strong>Средний</strong></div>
+                                    </div>
+                                    <button class="btn-secondary">Скачать PDF</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Настройки -->
+            <section id="settings" class="page">
+                <div class="dashboard-container">
+                    <div class="dashboard-sidebar">
+                        <div class="sidebar-header">
+                            <div class="user-info">
+                                <div class="user-avatar" id="user-avatar-settings">ИИ</div>
+                                <div class="user-details">
+                                    <div class="user-name" id="user-name-settings">Иван Иванов</div>
+                                    <div class="user-status">Online</div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="sidebar-nav">
+                            <a href="#dashboard" class="nav-item" data-page="dashboard">
+                                <span class="nav-icon">📊</span>
+                                <span class="nav-text">Обзор</span>
+                            </a>
+                            <a href="#device-overview" class="nav-item" data-page="device-overview">
+                                <span class="nav-icon">📱</span>
+                                <span class="nav-text">Устройства</span>
+                            </a>
+                            <a href="#alerts" class="nav-item" data-page="alerts">
+                                <span class="nav-icon">⚠️</span>
+                                <span class="nav-text">Оповещения</span>
+                            </a>
+                            <a href="#reports" class="nav-item" data-page="reports">
+                                <span class="nav-icon">📋</span>
+                                <span class="nav-text">Отчеты</span>
+                            </a>
+                            <a href="#settings" class="nav-item active" data-page="settings">
+                                <span class="nav-icon">⚙️</span>
+                                <span class="nav-text">Настройки</span>
+                            </a>
+                            <a href="#logout" class="nav-item" id="logout-btn-settings">
+                                <span class="nav-icon">🚪</span>
+                                <span class="nav-text">Выйти</span>
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="dashboard-subpage">
+                            <div class="subpage-header">
+                                <h2>Настройки системы</h2>
+                            </div>
+                            <div class="settings-form">
+                                <div class="form-group">
+                                    <label for="notifications">Уведомления</label>
+                                    <select id="notifications" class="form-control">
+                                        <option>Все уведомления</option>
+                                        <option>Только критические</option>
+                                        <option>Отключить все</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="scan-frequency">Частота сканирования</label>
+                                    <select id="scan-frequency" class="form-control">
+                                        <option>Каждый час</option>
+                                        <option>Каждые 6 часов</option>
+                                        <option>Ежедневно</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="language">Язык</label>
+                                    <select id="language" class="form-control">
+                                        <option>Русский</option>
+                                        <option>English</option>
+                                    </select>
+                                </div>
+                                <button class="btn-primary">Сохранить настройки</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Отзывы -->
+            <section id="reviews" class="page">
+                <div class="page-container">
+                    <div class="reviews-header">
+                        <h1>Отзывы наших клиентов</h1>
+                        <p class="page-subtitle">Что говорят пользователи о системе SafeHome</p>
+                    </div>
+                    
+                    <div class="reviews-grid">
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="review-avatar">ИИ</div>
+                                <div class="review-info">
+                                    <div class="review-author">Иван Иванов</div>
+                                    <div class="review-date">15 марта 2025</div>
+                                </div>
+                                <div class="review-rating">★★★★★</div>
+                            </div>
+                            <div class="review-content">
+                                "Система обнаружила неизвестное Bluetooth-устройство в моей квартире, о котором я даже не подозревал. Оказалось, это был жучок, оставленный предыдущими жильцами. Благодаря SafeHome смог обезопасить свой дом!"
+                            </div>
+                            <div class="review-source">
+                                <span class="source-icon">📍</span>
+                                <span>Москва</span>
+                            </div>
+                        </div>
+                        
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="review-avatar">МП</div>
+                                <div class="review-info">
+                                    <div class="review-author">Мария Петрова</div>
+                                    <div class="review-date">12 марта 2025</div>
+                                </div>
+                                <div class="review-rating">★★★★★</div>
+                            </div>
+                            <div class="review-content">
+                                "Как владелица небольшого бизнеса, я беспокоилась о конфиденциальности переговоров. SafeHome помог обнаружить несколько подозрительных устройств в конференц-зале. Теперь чувствую себя в полной безопасности."
+                            </div>
+                            <div class="review-source">
+                                <span class="source-icon">📍</span>
+                                <span>Санкт-Петербург</span>
+                            </div>
+                        </div>
+                        
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="review-avatar">СК</div>
+                                <div class="review-info">
+                                    <div class="review-author">Сергей Козлов</div>
+                                    <div class="review-date">8 марта 2025</div>
+                                </div>
+                                <div class="review-rating">★★★★☆</div>
+                            </div>
+                            <div class="review-content">
+                                "Пользуюсь системой 3 месяца. Обнаружил 2 неизвестных устройства, которые оказались соседскими гаджетами. Интерфейс интуитивный, оповещения приходят мгновенно. Рекомендую для защиты умного дома."
+                            </div>
+                            <div class="review-source">
+                                <span class="source-icon">📍</span>
+                                <span>Екатеринбург</span>
+                            </div>
+                        </div>
+                        
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="review-avatar">АС</div>
+                                <div class="review-info">
+                                    <div class="review-author">Анна Смирнова</div>
+                                    <div class="review-date">5 марта 2025</div>
+                                </div>
+                                <div class="review-rating">★★★★★</div>
+                            </div>
+                            <div class="review-content">
+                                "Установила систему после того, как начали происходить странные вещи с умными устройствами. SafeHome выявил попытку взлома Wi-Fi сети! Техподдержка помогла настроить дополнительную защиту."
+                            </div>
+                            <div class="review-source">
+                                <span class="source-icon">📍</span>
+                                <span>Казань</span>
+                            </div>
+                        </div>
+                        
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="review-avatar">ДК</div>
+                                <div class="review-info">
+                                    <div class="review-author">Дмитрий Кузнецов</div>
+                                    <div class="review-date">1 марта 2025</div>
+                                </div>
+                                <div class="review-rating">★★★★★</div>
+                            </div>
+                            <div class="review-content">
+                                "Работаю в IT-безопасности и могу оценить профессионализм решения. Пассивный мониторинг без вмешательства в сеть - это именно то, что нужно для настоящей безопасности. Обнаружили скрытую камеру в арендованной квартире."
+                            </div>
+                            <div class="review-source">
+                                <span class="source-icon">📍</span>
+                                <span>Новосибирск</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Блог -->
+            <section id="blog" class="page">
+                <div class="page-container">
+                    <div class="blog-header">
+                        <h1>Блог о безопасности</h1>
+                        <p class="page-subtitle">Актуальные статьи и исследования в области кибербезопасности умного дома</p>
+                    </div>
+                    
+                    <div class="blog-controls">
+                        <div class="search-box">
+                            <input type="text" placeholder="Поиск статей..." class="search-input">
+                            <button class="search-btn">🔍</button>
+                        </div>
+                        <div class="category-filter">
+                            <button class="filter-btn active">Все</button>
+                            <button class="filter-btn">Безопасность</button>
+                            <button class="filter-btn">Технологии</button>
+                            <button class="filter-btn">Советы</button>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-grid">
+                        <article class="blog-card featured" data-article="hidden-threats">
+                            <div class="card-badge">Популярное</div>
+                            <div class="card-image">
+                                <div class="image-placeholder">🛡️</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <span class="category">Безопасность</span>
+                                    <span class="date">15 марта 2025</span>
+                                </div>
+                                <h3 class="card-title">5 скрытых угроз для вашего умного дома</h3>
+                                <p class="card-excerpt">Узнайте о незаметных атаках, которые могут compromетировать ваши устройства без вашего ведома...</p>
+                                <div class="card-footer">
+                                    <div class="author">
+                                        <div class="author-avatar">АИ</div>
+                                        <span class="author-name">Алексей Иванов</span>
+                                    </div>
+                                    <button class="read-more" data-page="article" data-article="hidden-threats">Читать →</button>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="blog-card" data-article="sdr-technology">
+                            <div class="card-image">
+                                <div class="image-placeholder">📡</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <span class="category">Технологии</span>
+                                    <span class="date">12 марта 2025</span>
+                                </div>
+                                <h3 class="card-title">Как SDR-технология меняет подход к безопасности</h3>
+                                <p class="card-excerpt">Software Defined Radio открывает новые возможности для пассивного мониторинга...</p>
+                                <div class="card-footer">
+                                    <div class="author">
+                                        <div class="author-avatar">МП</div>
+                                        <span class="author-name">Мария Петрова</span>
+                                    </div>
+                                    <button class="read-more" data-page="article" data-article="sdr-technology">Читать →</button>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="blog-card" data-article="home-protection">
+                            <div class="card-image">
+                                <div class="image-placeholder">🔒</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <span class="category">Советы</span>
+                                    <span class="date">8 марта 2025</span>
+                                </div>
+                                <h3 class="card-title">10 шагов для защиты вашего умного дома</h3>
+                                <p class="card-excerpt">Практические рекомендации по усилению безопасности IoT-устройств...</p>
+                                <div class="card-footer">
+                                    <div class="author">
+                                        <div class="author-avatar">СК</div>
+                                        <span class="author-name">Сергей Козлов</span>
+                                    </div>
+                                    <button class="read-more" data-page="article" data-article="home-protection">Читать →</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Новые статьи -->
+                        <article class="blog-card" data-article="rf-security">
+                            <div class="card-image">
+                                <div class="image-placeholder">📶</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <span class="category">Безопасность</span>
+                                    <span class="date">5 марта 2025</span>
+                                </div>
+                                <h3 class="card-title">Защита от RF-атак в умном доме</h3>
+                                <p class="card-excerpt">Как защитить свои устройства от радиочастотных атак и несанкционированного доступа...</p>
+                                <div class="card-footer">
+                                    <div class="author">
+                                        <div class="author-avatar">ДК</div>
+                                        <span class="author-name">Дмитрий Ковалев</span>
+                                    </div>
+                                    <button class="read-more" data-page="article" data-article="rf-security">Читать →</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card" data-article="iot-trends">
+                            <div class="card-image">
+                                <div class="image-placeholder">🚀</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <span class="category">Технологии</span>
+                                    <span class="date">3 марта 2025</span>
+                                </div>
+                                <h3 class="card-title">Тренды IoT безопасности в 2025 году</h3>
+                                <p class="card-excerpt">Обзор новых технологий и подходов к защите умных устройств...</p>
+                                <div class="card-footer">
+                                    <div class="author">
+                                        <div class="author-avatar">ЕС</div>
+                                        <span class="author-name">Елена Семенова</span>
+                                    </div>
+                                    <button class="read-more" data-page="article" data-article="iot-trends">Читать →</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="blog-card" data-article="privacy-tips">
+                            <div class="card-image">
+                                <div class="image-placeholder">🔐</div>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-meta">
+                                    <span class="category">Советы</span>
+                                    <span class="date">1 марта 2025</span>
+                                </div>
+                                <h3 class="card-title">7 способов сохранить приватность в умном доме</h3>
+                                <p class="card-excerpt">Простые, но эффективные методы защиты личных данных...</p>
+                                <div class="card-footer">
+                                    <div class="author">
+                                        <div class="author-avatar">АВ</div>
+                                        <span class="author-name">Анна Воронова</span>
+                                    </div>
+                                    <button class="read-more" data-page="article" data-article="privacy-tips">Читать →</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <div class="blog-pagination">
+                        <button class="pagination-btn active">1</button>
+                        <button class="pagination-btn">2</button>
+                        <button class="pagination-btn">3</button>
+                        <button class="pagination-btn next">→</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Страница статьи -->
+            <section id="article" class="page">
+                <div class="page-container">
+                    <div class="article-header">
+                        <div class="article-meta">
+                            <span class="category">Безопасность</span>
+                            <span class="date">15 марта 2025</span>
+                            <span class="reading-time">5 мин чтения</span>
+                        </div>
+                        <h1>5 скрытых угроз для вашего умного дома</h1>
+                        <p class="page-subtitle">Как незаметные атаки могут скомпрометировать ваши устройства без вашего ведома</p>
+                    </div>
+                    
+                    <div class="article-content">
+                        <p>С развитием технологий умный дом становится все более уязвимым для кибератак. В отличие от традиционных угроз, современные атаки часто остаются незамеченными месяцами.</p>
+                        
+                        <h2>1. Пассивное прослушивание радиоэфира</h2>
+                        <p>Злоумышленники могут использовать SDR-приемники для пассивного мониторинга ваших беспроводных устройств. Они не оставляют следов в сети и не могут быть обнаружены традиционными системами безопасности.</p>
+                        
+                        <h2>2. Устройства-невидимки</h2>
+                        <p>Многие IoT-устройства имеют скрытые режимы работы, которые активируются по специальным командам. Такие устройства могут передавать данные, оставаясь невидимыми для стандартного сканирования сети.</p>
+                        
+                        <h2>3. Атаки на протоколы связи</h2>
+                        <p>Bluetooth Low Energy, Zigbee и другие протоколы умного дома имеют уязвимости, позволяющие перехватывать управление устройствами без взлома паролей.</p>
+                        
+                        <h2>4. Клонирование устройств</h2>
+                        <p>Злоумышленники могут создавать клоны ваших доверенных устройств, получая полный доступ к системе без вашего ведома.</p>
+                        
+                        <h2>5. Скрытые точки доступа</h2>
+                        <p>Миниатюрные Wi-Fi роутеры могут быть спрятаны в самых неожиданных местах, создавая скрытые каналы для утечки данных.</p>
+                        
+                        <h2>Как защититься?</h2>
+                        <p>Система SafeHome использует пассивный мониторинг радиоэфира для обнаружения подобных угроз. Мы анализируем электромагнитное излучение всех устройств в реальном времени и предупреждаем о подозрительной активности.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Страница тарифа -->
+            <section id="plan" class="page">
+                <div class="page-container">
+                    <div class="services-header">
+                        <h1 id="plan-title">Профессиональный тариф</h1>
+                        <p class="page-subtitle">Полный контроль безопасности для вашего умного дома</p>
+                    </div>
+                    
+                    <div class="pricing-grid" style="max-width: 500px; margin: 0 auto;">
+                        <div class="pricing-card featured" id="selected-plan">
+                            <div class="pricing-badge" id="plan-badge">Популярный</div>
+                            <div class="pricing-header">
+                                <h3 id="plan-name">Профессиональный</h3>
+                                <div class="price">
+                                    <span class="currency">₽</span>
+                                    <span class="amount" id="plan-price">1990</span>
+                                    <span class="period">/месяц</span>
+                                </div>
+                            </div>
+                            <div class="pricing-features" id="plan-features">
+                                <!-- Features will be populated by JavaScript -->
+                            </div>
+                            <button class="btn-primary full-width" id="subscribe-btn">Оформить подписку</button>
+                        </div>
+                    </div>
+                    
+                    <div class="services-features" style="margin-top: 4rem;">
+                        <h2>Что входит в этот пакет</h2>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">📡</div>
+                                <h4>SDR-мониторинг</h4>
+                                <p>Пассивный анализ всех радиочастотных диапазонов в реальном времени</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">🤖</div>
+                                <h4>ИИ-аналитика</h4>
+                                <p>Умные алгоритмы для обнаружения аномалий и неизвестных устройств</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">📱</div>
+                                <h4>Мобильное приложение</h4>
+                                <p>Полный контроль безопасности с вашего смартфона</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Контакты -->
+            <section id="contacts" class="page">
+                <div class="page-container">
+                    <div class="contacts-header">
+                        <h1>Свяжитесь с нами</h1>
+                        <p class="page-subtitle">Мы всегда готовы ответить на ваши вопросы и помочь с настройкой системы</p>
+                    </div>
+                    
+                    <div class="contacts-grid">
+                        <div class="contact-info">
+                            <div class="contact-card">
+                                <div class="contact-icon">📞</div>
+                                <div class="contact-details">
+                                    <h4>Телефон</h4>
+                                    <p>+7 (495) 123-45-67</p>
+                                    <span class="contact-note">Ежедневно с 9:00 до 21:00</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-card">
+                                <div class="contact-icon">✉️</div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <p>support@safehome.ru</p>
+                                    <span class="contact-note">Ответ в течение 2 часов</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-card">
+                                <div class="contact-icon">💬</div>
+                                <div class="contact-details">
+                                    <h4>Чат поддержки</h4>
+                                    <p>Онлайн-консультант</p>
+                                    <span class="contact-note">Круглосуточно</span>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-card">
+                                <div class="contact-icon">📍</div>
+                                <div class="contact-details">
+                                    <h4>Офис</h4>
+                                    <p>Москва, ул. Технологическая, 42</p>
+                                    <span class="contact-note">Пн-Пт с 10:00 до 19:00</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-form-container">
+                            <form class="contact-form" id="contact-form">
+                                <h3>Отправить сообщение</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="contact-name">Имя</label>
+                                        <input type="text" id="contact-name" placeholder="Ваше имя" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact-email">Email</label>
+                                        <input type="email" id="contact-email" placeholder="your@email.com" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-subject">Тема</label>
+                                    <input type="text" id="contact-subject" placeholder="Тема сообщения" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-message">Сообщение</label>
+                                    <textarea id="contact-message" placeholder=" " rows="5" margin-bottom: 30px required></textarea>
+                                </div>
+                                <button type="submit" class="btn-primary full-width">Отправить сообщение</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <div class="map-content">
+                                <div class="map-marker">📍</div>
+                                <div class="map-info">
+                                    <h4>Наш офис в Москве</h4>
+                                    <p>ул. Технологическая, 42</p>
+                                    <button class="btn-secondary">Проложить маршрут</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Новое сканирование -->
+            <section id="new-scan" class="page">
+                <div class="dashboard-container">
+                    <div class="dashboard-sidebar">
+                        <div class="sidebar-header">
+                            <div class="user-info">
+                                <div class="user-avatar" id="user-avatar-scan">ИИ</div>
+                                <div class="user-details">
+                                    <div class="user-name" id="user-name-scan">Иван Иванов</div>
+                                    <div class="user-status">Online</div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="sidebar-nav">
+                            <a href="#dashboard" class="nav-item" data-page="dashboard">
+                                <span class="nav-icon">📊</span>
+                                <span class="nav-text">Обзор</span>
+                            </a>
+                            <a href="#device-overview" class="nav-item" data-page="device-overview">
+                                <span class="nav-icon">📱</span>
+                                <span class="nav-text">Устройства</span>
+                            </a>
+                            <a href="#alerts" class="nav-item" data-page="alerts">
+                                <span class="nav-icon">⚠️</span>
+                                <span class="nav-text">Оповещения</span>
+                            </a>
+                            <a href="#reports" class="nav-item" data-page="reports">
+                                <span class="nav-icon">📋</span>
+                                <span class="nav-text">Отчеты</span>
+                            </a>
+                            <a href="#settings" class="nav-item" data-page="settings">
+                                <span class="nav-icon">⚙️</span>
+                                <span class="nav-text">Настройки</span>
+                            </a>
+                            <a href="#logout" class="nav-item" id="logout-btn-scan">
+                                <span class="nav-icon">🚪</span>
+                                <span class="nav-text">Выйти</span>
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="scan-container">
+                            <div class="scan-progress">
+                                <div class="progress-circle">
+                                    <div class="progress-text">0%</div>
+                                </div>
+                                <h3>Сканирование радиоэфира</h3>
+                                <p>Система анализирует электромагнитное излучение в вашем помещении</p>
+                            </div>
+                            
+                            <div class="scan-info">
+                                <h3>Ход сканирования</h3>
+                                <div class="scan-steps">
+                                    <div class="scan-step active">
+                                        <span class="step-icon">📡</span>
+                                        <span class="step-text">Инициализация SDR-приемника</span>
+                                    </div>
+                                    <div class="scan-step">
+                                        <span class="step-icon">🔍</span>
+                                        <span class="step-text">Сканирование диапазонов</span>
+                                    </div>
+                                    <div class="scan-step">
+                                        <span class="step-icon">🤖</span>
+                                        <span class="step-text">Анализ сигналов ИИ</span>
+                                    </div>
+                                    <div class="scan-step">
+                                        <span class="step-icon">📊</span>
+                                        <span class="step-text">Формирование отчета</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="scan-stats">
+                                    <div class="scan-stat">
+                                        <span class="value">24</span>
+                                        <span class="label">Устройств найдено</span>
+                                    </div>
+                                    <div class="scan-stat">
+                                        <span class="value">3</span>
+                                        <span class="label">Подозрительных</span>
+                                    </div>
+                                    <div class="scan-stat">
+                                        <span class="value">98%</span>
+                                        <span class="label">Точность</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Дашборд модератора -->
+            <section id="moderator" class="page">
+                <div class="dashboard-container">
+                    <div class="dashboard-sidebar">
+                        <div class="sidebar-header">
+                            <div class="user-info">
+                                <div class="user-avatar">МД</div>
+                                <div class="user-details">
+                                    <div class="user-name">Модератор</div>
+                                    <div class="user-status">Online</div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="sidebar-nav">
+                            <a href="#moderator" class="nav-item active" data-page="moderator">
+                                <span class="nav-icon">📊</span>
+                                <span class="nav-text">Панель управления</span>
+                            </a>
+                            <a href="#moderator-users" class="nav-item" data-page="moderator-users">
+                                <span class="nav-icon">👥</span>
+                                <span class="nav-text">Пользователи</span>
+                                <span class="nav-badge">42</span>
+                            </a>
+                            <a href="#moderator-analytics" class="nav-item" data-page="moderator-analytics">
+                                <span class="nav-icon">📈</span>
+                                <span class="nav-text">Аналитика</span>
+                            </a>
+                            <a href="#moderator-reports" class="nav-item" data-page="moderator-reports">
+                                <span class="nav-icon">📋</span>
+                                <span class="nav-text">Системные отчеты</span>
+                            </a>
+                            <a href="#moderator-settings" class="nav-item" data-page="moderator-settings">
+                                <span class="nav-icon">⚙️</span>
+                                <span class="nav-text">Настройки системы</span>
+                            </a>
+                            <a href="#logout" class="nav-item" id="logout-btn-moderator">
+                                <span class="nav-icon">🚪</span>
+                                <span class="nav-text">Выйти</span>
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="dashboard-header">
+                            <h1>Панель модератора</h1>
+                            <div class="header-actions">
+                                <div class="status-indicator positive">
+                                    <div class="status-dot"></div>
+                                    Система активна
+                                </div>
+                                <button class="btn-primary" id="refresh-data">Обновить данные</button>
+                            </div>
+                        </div>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon">👥</div>
+                                <div class="stat-content">
+                                    <div class="stat-value">1,247</div>
+                                    <div class="stat-label">Всего пользователей</div>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">🛡️</div>
+                                <div class="stat-content">
+                                    <div class="stat-value">98.3%</div>
+                                    <div class="stat-label">Стабильность системы</div>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">⚠️</div>
+                                <div class="stat-content">
+                                    <div class="stat-value">23</div>
+                                    <div class="stat-label">Критические события</div>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon">📶</div>
+                                <div class="stat-content">
+                                    <div class="stat-value">12,458</div>
+                                    <div class="stat-label">Мониторируемых устройств</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard-grid">
+                            <div class="chart-card">
+                                <div class="card-header">
+                                    <h3>Статистика системы</h3>
+                                    <select class="time-selector">
+                                        <option>24 часа</option>
+                                        <option>7 дней</option>
+                                        <option>30 дней</option>
+                                    </select>
+                                </div>
+                                <div class="chart-container">
+                                    <div class="chart-axis">
+                                        <div class="y-axis">
+                                            <span>Активность (%)</span>
+                                            <div class="y-labels">
+                                                <span>100</span>
+                                                <span>75</span>
+                                                <span>50</span>
+                                                <span>25</span>
+                                                <span>0</span>
+                                            </div>
+                                        </div>
+                                        <div class="chart-area">
+                                            <div class="chart-bars">
+                                                <div class="bar" style="height: 70%" data-value="70"></div>
+                                                <div class="bar" style="height: 85%" data-value="85"></div>
+                                                <div class="bar" style="height: 60%" data-value="60"></div>
+                                                <div class="bar" style="height: 90%" data-value="90"></div>
+                                                <div class="bar" style="height: 75%" data-value="75"></div>
+                                                <div class="bar" style="height: 80%" data-value="80"></div>
+                                                <div class="bar" style="height: 65%" data-value="65"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="x-axis">
+                                        <span>Дни недели</span>
+                                        <div class="x-labels">
+                                            <span>Пн</span>
+                                            <span>Вт</span>
+                                            <span>Ср</span>
+                                            <span>Чт</span>
+                                            <span>Пт</span>
+                                            <span>Сб</span>
+                                            <span>Вс</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="alerts-card">
+                                <div class="card-header">
+                                    <h3>Системные оповещения</h3>
+                                    <button class="btn-ghost">Все оповещения</button>
+                                </div>
+                                <div class="alerts-list">
+                                    <div class="alert-item warning">
+                                        <div class="alert-icon">⚠️</div>
+                                        <div class="alert-content">
+                                            <div class="alert-title">Высокая нагрузка на сервер</div>
+                                            <div class="alert-description">Наблюдается повышенная активность пользователей</div>
+                                            <div class="alert-time">30 минут назад</div>
+                                        </div>
+                                    </div>
+                                    <div class="alert-item info">
+                                        <div class="alert-icon">ℹ️</div>
+                                        <div class="alert-content">
+                                            <div class="alert-title">Обновление системы</div>
+                                            <div class="alert-description">Запланировано обновление на 02:00</div>
+                                            <div class="alert-time">2 часа назад</div>
+                                        </div>
+                                    </div>
+                                    <div class="alert-item critical">
+                                        <div class="alert-icon">🚨</div>
+                                        <div class="alert-content">
+                                            <div class="alert-title">Обнаружена новая угроза</div>
+                                            <div class="alert-description">Выявлен новый тип скрытого устройства</div>
+                                            <div class="alert-time">5 часов назад</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="moderator-controls">
+                            <h3>Управление системой</h3>
+                            <div class="control-buttons">
+                                <button class="btn-primary" id="backup-btn">Резервное копирование</button>
+                                <button class="btn-secondary" id="clear-cache-btn">Очистить кэш</button>
+                                <button class="btn-secondary" id="check-updates-btn">Проверить обновления</button>
+                                <button class="btn-primary" id="restart-services-btn">Перезапустить сервисы</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Пользователи модератора -->
+            <section id="moderator-users" class="page">
+                <div class="dashboard-container">
+                    <div class="dashboard-sidebar">
+                        <div class="sidebar-header">
+                            <div class="user-info">
+                                <div class="user-avatar">МД</div>
+                                <div class="user-details">
+                                    <div class="user-name">Модератор</div>
+                                    <div class="user-status">Online</div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="sidebar-nav">
+                            <a href="#moderator" class="nav-item" data-page="moderator">
+                                <span class="nav-icon">📊</span>
+                                <span class="nav-text">Панель управления</span>
+                            </a>
+                            <a href="#moderator-users" class="nav-item active" data-page="moderator-users">
+                                <span class="nav-icon">👥</span>
+                                <span class="nav-text">Пользователи</span>
+                                <span class="nav-badge">42</span>
+                            </a>
+                            <a href="#moderator-analytics" class="nav-item" data-page="moderator-analytics">
+                                <span class="nav-icon">📈</span>
+                                <span class="nav-text">Аналитика</span>
+                            </a>
+                            <a href="#moderator-reports" class="nav-item" data-page="moderator-reports">
+                                <span class="nav-icon">📋</span>
+                                <span class="nav-text">Системные отчеты</span>
+                            </a>
+                            <a href="#moderator-settings" class="nav-item" data-page="moderator-settings">
+                                <span class="nav-icon">⚙️</span>
+                                <span class="nav-text">Настройки системы</span>
+                            </a>
+                            <a href="#logout" class="nav-item" id="logout-btn-moderator">
+                                <span class="nav-icon">🚪</span>
+                                <span class="nav-text">Выйти</span>
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="dashboard-subpage">
+                            <div class="subpage-header">
+                                <h2>Управление пользователями</h2>
+                                <button class="btn-primary">Добавить пользователя</button>
+                            </div>
+                            <div class="devices-list">
+                                <div class="device-card">
+                                    <div class="device-header">
+                                        <div class="device-icon">👤</div>
+                                        <div class="device-info">
+                                            <div class="device-name">Иван Иванов</div>
+                                            <div class="device-status trusted">Активен</div>
+                                        </div>
+                                    </div>
+                                    <div class="device-details">
+                                        <div class="detail">Email: ivan@example.com</div>
+                                        <div class="detail">Тариф: Профессиональный</div>
+                                        <div class="detail">Устройств: 24</div>
+                                    </div>
+                                </div>
+                                <div class="device-card">
+                                    <div class="device-header">
+                                        <div class="device-icon">👤</div>
+                                        <div class="device-info">
+                                            <div class="device-name">Мария Петрова</div>
+                                            <div class="device-status trusted">Активен</div>
+                                        </div>
+                                    </div>
+                                    <div class="device-details">
+                                        <div class="detail">Email: maria@example.com</div>
+                                        <div class="detail">Тариф: Премиум</div>
+                                        <div class="detail">Устройств: 42</div>
+                                    </div>
+                                </div>
+                                <div class="device-card">
+                                    <div class="device-header">
+                                        <div class="device-icon">👤</div>
+                                        <div class="device-info">
+                                            <div class="device-name">Сергей Козлов</div>
+                                            <div class="device-status suspicious">Неактивен</div>
+                                        </div>
+                                    </div>
+                                    <div class="device-details">
+                                        <div class="detail">Email: sergey@example.com</div>
+                                        <div class="detail">Тариф: Базовый</div>
+                                        <div class="detail">Устройств: 8</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Аналитика модератора -->
+            <section id="moderator-analytics" class="page">
+                <div class="dashboard-container">
+                    <div class="dashboard-sidebar">
+                        <div class="sidebar-header">
+                            <div class="user-info">
+                                <div class="user-avatar">МД</div>
+                                <div class="user-details">
+                                    <div class="user-name">Модератор</div>
+                                    <div class="user-status">Online</div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="sidebar-nav">
+                            <a href="#moderator" class="nav-item" data-page="moderator">
+                                <span class="nav-icon">📊</span>
+                                <span class="nav-text">Панель управления</span>
+                            </a>
+                            <a href="#moderator-users" class="nav-item" data-page="moderator-users">
+                                <span class="nav-icon">👥</span>
+                                <span class="nav-text">Пользователи</span>
+                            </a>
+                            <a href="#moderator-analytics" class="nav-item active" data-page="moderator-analytics">
+                                <span class="nav-icon">📈</span>
+                                <span class="nav-text">Аналитика</span>
+                            </a>
+                            <a href="#moderator-reports" class="nav-item" data-page="moderator-reports">
+                                <span class="nav-icon">📋</span>
+                                <span class="nav-text">Системные отчеты</span>
+                            </a>
+                            <a href="#moderator-settings" class="nav-item" data-page="moderator-settings">
+                                <span class="nav-icon">⚙️</span>
+                                <span class="nav-text">Настройки системы</span>
+                            </a>
+                            <a href="#logout" class="nav-item" id="logout-btn-moderator">
+                                <span class="nav-icon">🚪</span>
+                                <span class="nav-text">Выйти</span>
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="dashboard-subpage">
+                            <div class="subpage-header">
+                                <h2>Аналитика системы</h2>
+                                <button class="btn-primary">Экспорт данных</button>
+                            </div>
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-icon">📊</div>
+                                    <div class="stat-content">
+                                        <div class="stat-value">1,247</div>
+                                        <div class="stat-label">Активных пользователей</div>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">📈</div>
+                                    <div class="stat-content">
+                                        <div class="stat-value">+12%</div>
+                                        <div class="stat-label">Рост за месяц</div>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">🛡️</div>
+                                    <div class="stat-content">
+                                        <div class="stat-value">98.3%</div>
+                                        <div class="stat-label">Стабильность системы</div>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">⚠️</div>
+                                    <div class="stat-content">
+                                        <div class="stat-value">23</div>
+                                        <div class="stat-label">Критических событий</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-card">
+                                <div class="card-header">
+                                    <h3>Статистика использования</h3>
+                                    <select class="time-selector">
+                                        <option>24 часа</option>
+                                        <option>7 дней</option>
+                                        <option>30 дней</option>
+                                    </select>
+                                </div>
+                                <div class="chart-container">
+                                    <div class="chart-axis">
+                                        <div class="y-axis">
+                                            <span>Пользователи</span>
+                                            <div class="y-labels">
+                                                <span>1000</span>
+                                                <span>750</span>
+                                                <span>500</span>
+                                                <span>250</span>
+                                                <span>0</span>
+                                            </div>
+                                        </div>
+                                        <div class="chart-area">
+                                            <div class="chart-bars">
+                                                <div class="bar" style="height: 60%" data-value="600"></div>
+                                                <div class="bar" style="height: 75%" data-value="750"></div>
+                                                <div class="bar" style="height: 80%" data-value="800"></div>
+                                                <div class="bar" style="height: 90%" data-value="900"></div>
+                                                <div class="bar" style="height: 85%" data-value="850"></div>
+                                                <div class="bar" style="height: 95%" data-value="950"></div>
+                                                <div class="bar" style="height: 100%" data-value="1000"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="x-axis">
+                                        <span>Дни недели</span>
+                                        <div class="x-labels">
+                                            <span>Пн</span>
+                                            <span>Вт</span>
+                                            <span>Ср</span>
+                                            <span>Чт</span>
+                                            <span>Пт</span>
+                                            <span>Сб</span>
+                                            <span>Вс</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Системные отчеты модератора -->
+            <section id="moderator-reports" class="page">
+                <div class="dashboard-container">
+                    <div class="dashboard-sidebar">
+                        <div class="sidebar-header">
+                            <div class="user-info">
+                                <div class="user-avatar">МД</div>
+                                <div class="user-details">
+                                    <div class="user-name">Модератор</div>
+                                    <div class="user-status">Online</div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="sidebar-nav">
+                            <a href="#moderator" class="nav-item" data-page="moderator">
+                                <span class="nav-icon">📊</span>
+                                <span class="nav-text">Панель управления</span>
+                            </a>
+                            <a href="#moderator-users" class="nav-item" data-page="moderator-users">
+                                <span class="nav-icon">👥</span>
+                                <span class="nav-text">Пользователи</span>
+                            </a>
+                            <a href="#moderator-analytics" class="nav-item" data-page="moderator-analytics">
+                                <span class="nav-icon">📈</span>
+                                <span class="nav-text">Аналитика</span>
+                            </a>
+                            <a href="#moderator-reports" class="nav-item active" data-page="moderator-reports">
+                                <span class="nav-icon">📋</span>
+                                <span class="nav-text">Системные отчеты</span>
+                            </a>
+                            <a href="#moderator-settings" class="nav-item" data-page="moderator-settings">
+                                <span class="nav-icon">⚙️</span>
+                                <span class="nav-text">Настройки системы</span>
+                            </a>
+                            <a href="#logout" class="nav-item" id="logout-btn-moderator">
+                                <span class="nav-icon">🚪</span>
+                                <span class="nav-text">Выйти</span>
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="dashboard-subpage">
+                            <div class="subpage-header">
+                                <h2>Системные отчеты</h2>
+                                <button class="btn-primary">Создать отчет</button>
+                            </div>
+                            <div class="reports-grid">
+                                <div class="report-card">
+                                    <div class="report-header">
+                                        <h3>Еженедельный системный отчет</h3>
+                                        <span class="report-date">10 марта 2025</span>
+                                    </div>
+                                    <div class="report-stats">
+                                        <div class="stat">Активных пользователей: <strong>1,247</strong></div>
+                                        <div class="stat">Обнаружено угроз: <strong>156</strong></div>
+                                        <div class="stat">Среднее время ответа: <strong>0.8с</strong></div>
+                                    </div>
+                                    <button class="btn-secondary">Скачать PDF</button>
+                                </div>
+                                <div class="report-card">
+                                    <div class="report-header">
+                                        <h3>Ежемесячный системный отчет</h3>
+                                        <span class="report-date">1 марта 2025</span>
+                                    </div>
+                                    <div class="report-stats">
+                                        <div class="stat">Новых пользователей: <strong>89</strong></div>
+                                        <div class="stat">Критических событий: <strong>23</strong></div>
+                                        <div class="stat">Доступность системы: <strong>99.8%</strong></div>
+                                    </div>
+                                    <button class="btn-secondary">Скачать PDF</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Настройки системы модератора -->
+            <section id="moderator-settings" class="page">
+                <div class="dashboard-container">
+                    <div class="dashboard-sidebar">
+                        <div class="sidebar-header">
+                            <div class="user-info">
+                                <div class="user-avatar">МД</div>
+                                <div class="user-details">
+                                    <div class="user-name">Модератор</div>
+                                    <div class="user-status">Online</div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="sidebar-nav">
+                            <a href="#moderator" class="nav-item" data-page="moderator">
+                                <span class="nav-icon">📊</span>
+                                <span class="nav-text">Панель управления</span>
+                            </a>
+                            <a href="#moderator-users" class="nav-item" data-page="moderator-users">
+                                <span class="nav-icon">👥</span>
+                                <span class="nav-text">Пользователи</span>
+                            </a>
+                            <a href="#moderator-analytics" class="nav-item" data-page="moderator-analytics">
+                                <span class="nav-icon">📈</span>
+                                <span class="nav-text">Аналитика</span>
+                            </a>
+                            <a href="#moderator-reports" class="nav-item" data-page="moderator-reports">
+                                <span class="nav-icon">📋</span>
+                                <span class="nav-text">Системные отчеты</span>
+                            </a>
+                            <a href="#moderator-settings" class="nav-item active" data-page="moderator-settings">
+                                <span class="nav-icon">⚙️</span>
+                                <span class="nav-text">Настройки системы</span>
+                            </a>
+                            <a href="#logout" class="nav-item" id="logout-btn-moderator">
+                                <span class="nav-icon">🚪</span>
+                                <span class="nav-text">Выйти</span>
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="dashboard-content">
+                        <div class="dashboard-subpage">
+                            <div class="subpage-header">
+                                <h2>Настройки системы</h2>
+                            </div>
+                            <div class="settings-form">
+                                <div class="form-group">
+                                    <label for="system-notifications">Системные уведомления</label>
+                                    <select id="system-notifications" class="form-control">
+                                        <option>Все уведомления</option>
+                                        <option>Только критические</option>
+                                        <option>Отключить все</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="backup-frequency">Частота резервного копирования</label>
+                                    <select id="backup-frequency" class="form-control">
+                                        <option>Ежедневно</option>
+                                        <option>Еженедельно</option>
+                                        <option>Ежемесячно</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="log-retention">Срок хранения логов</label>
+                                    <select id="log-retention" class="form-control">
+                                        <option>30 дней</option>
+                                        <option>90 дней</option>
+                                        <option>1 год</option>
+                                    </select>
+                                </div>
+                                <button class="btn-primary">Сохранить настройки</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Страница в разработке -->
+            <section id="under-construction" class="page">
+                <div class="construction-container">
+                    <div class="construction-content">
+                        <div class="construction-icon">🚧</div>
+                        <h1>Страница в разработке</h1>
+                        <p>Мы активно работаем над созданием этой страницы. Скоро здесь появится новая функциональность!</p>
+                        <button class="btn-primary" data-page="home">На главную</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 404 -->
+            <section id="not-found" class="page">
+                <div class="error-container">
+                    <div class="error-content">
+                        <div class="error-code">404</div>
+                        <h1 class="error-title">Страница не найдена</h1>
+                        <p class="error-description">Запрашиваемая страница не существует или была перемещена</p>
+                        <div class="error-actions">
+                            <button class="btn-primary" data-page="home">На главную</button>
+                            <button class="btn-secondary" onclick="history.back()">Вернуться назад</button>
+                        </div>
+                        <div class="error-search">
+                            <p>Или найдите нужную информацию:</p>
+                            <div class="search-box">
+                                <input type="text" placeholder="Поиск по сайту..." class="search-input">
+                                <button class="search-btn">🔍</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="error-visual">
+                        <div class="floating-icon">🔍</div>
+                        <div class="floating-icon">📡</div>
+                        <div class="floating-icon">🛡️</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Подвал -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">🛡️</span>
+                        <span class="logo-text">SafeHome</span>
+                    </div>
+                    <p class="footer-description">
+                        Безопасность вашего умного дома через пассивный мониторинг радиоэфира
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home" data-page="home">Главная</a></li>
+                        <li><a href="#about" data-page="about">О компании</a></li>
+                        <li><a href="#services" data-page="services">Услуги</a></li>
+                        <li><a href="#reviews" data-page="reviews">Отзывы</a></li>
+                        <li><a href="#blog" data-page="blog">Блог</a></li>
+                        <li><a href="#contacts" data-page="contacts">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Услуги</h4>
+                    <ul class="footer-links">
+                        <li><a href="#plan" data-page="plan" data-plan="basic">Базовый мониторинг</a></li>
+                        <li><a href="#plan" data-page="plan" data-plan="professional">Профессиональный</a></li>
+                        <li><a href="#plan" data-page="plan" data-plan="premium">Премиум пакет</a></li>
+                        <li><a href="#sdr-equipment" data-page="sdr-equipment">SDR оборудование</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <div class="footer-contacts">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>+7 (495) 123-45-67</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <span>support@safehome.ru</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>Москва, ул. Технологическая, 42</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 SafeHome. Все права защищены.</p>
+                    <div class="footer-legal">
+                        <a href="#under-construction" data-page="under-construction">Политика конфиденциальности</a>
+                        <a href="#under-construction" data-page="under-construction">Условия использования</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/theme.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
